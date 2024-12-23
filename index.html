@@ -19,96 +19,105 @@
   </head>
   <body>
     <div class="container">
-      <h1>RB换算器</h1>
-
-      <!-- 汇率输入模块 -->
-      <div class="exchange-rate">
-        <h2>人民币和RB的兑换比例</h2>
-        <div class="rate-input">
-          <label for="rmb-to-rb-rate">1亿RB = </label>
-          <input
-            type="text"
-            id="rmb-to-rb-rate"
-            value="160"
-            min="0"
-            step="0.1"
-          />
-          <span>人民币</span>
-        </div>
-      </div>
-
-      <!-- 货币换算输入模块 -->
-      <div class="currency-converter">
-        <h2>货币换算</h2>
-        <div class="currency-grid">
-          <div class="currency-box">
-            <label for="rmb">人民币 (CNY)</label>
-            <div class="input-group">
-              <input
-                type="text"
-                id="rmb"
-                placeholder="输入人民币"
-                onkeyup="convertCurrency('rmb')"
-                onchange="convertCurrency('rmb')"
-              />
-              <button class="clear-btn" onclick="clearInput('rmb')">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-          </div>
-          <div class="currency-box">
-            <label for="rb">RB</label>
-            <div class="input-group">
-              <input
-                type="text"
-                id="rb"
-                placeholder="输入RB"
-                onkeyup="convertCurrency('rb')"
-                onchange="convertCurrency('rb')"
-              />
-              <button class="clear-btn" onclick="clearInput('rb')">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-            <div class="chinese-number" id="rb-chinese"></div>
-          </div>
-          <div class="currency-box">
-            <label for="mb">MB</label>
-            <div class="input-group">
-              <input
-                type="text"
-                id="mb"
-                placeholder="输入MB"
-                onkeyup="convertCurrency('mb')"
-                onchange="convertCurrency('mb')"
-              />
-              <button class="clear-btn" onclick="clearInput('mb')">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-            <div class="chinese-number" id="mb-chinese"></div>
-          </div>
-          <div class="currency-box">
-            <label for="thb">泰铢 (THB)</label>
-            <div class="input-group">
-              <input
-                type="text"
-                id="thb"
-                placeholder="输入泰铢"
-                onkeyup="convertCurrency('thb')"
-                onchange="convertCurrency('thb')"
-              />
-              <button class="clear-btn" onclick="clearInput('thb')">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-            <div class="exchange-rate-info" id="thb-rate">
-              正在获取汇率...
-            </div>
+      <div class="card">
+        <h1>货币转换器</h1>
+        <div class="exchange-rate">
+          <h2>人民币和RB的兑换比例</h2>
+          <div class="rate-input">
+            <label for="rmb-to-rb-rate">1亿RB = </label>
+            <input
+              type="text"
+              id="rmb-to-rb-rate"
+              value="160"
+              min="0"
+              step="0.1"
+            />
+            <span>人民币</span>
           </div>
         </div>
-        <button onclick="resetAll()" class="reset-button">重置所有</button>
+
+        <div class="currency-converter">
+          <h2>货币换算</h2>
+          <div class="currency-grid">
+            <div class="currency-box">
+              <label for="rmb">人民币 (CNY)</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="rmb"
+                  placeholder="输入人民币"
+                  onkeyup="convertCurrency('rmb')"
+                  onchange="convertCurrency('rmb')"
+                />
+                <button class="clear-btn" onclick="clearInput('rmb')">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <div class="currency-box">
+              <label for="rb">RB</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="rb"
+                  placeholder="输入RB"
+                  onkeyup="convertCurrency('rb')"
+                  onchange="convertCurrency('rb')"
+                />
+                <button class="clear-btn" onclick="clearInput('rb')">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="chinese-number" id="rb-chinese"></div>
+            </div>
+            <div class="currency-box">
+              <label for="mb">MB</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="mb"
+                  placeholder="输入MB"
+                  onkeyup="convertCurrency('mb')"
+                  onchange="convertCurrency('mb')"
+                />
+                <button class="clear-btn" onclick="clearInput('mb')">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="chinese-number" id="mb-chinese"></div>
+            </div>
+            <div class="currency-box">
+              <label for="thb">泰铢 (THB)</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="thb"
+                  placeholder="输入泰铢"
+                  onkeyup="convertCurrency('thb')"
+                  onchange="convertCurrency('thb')"
+                />
+                <button class="clear-btn" onclick="clearInput('thb')">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="exchange-rate-info" id="thb-rate">
+                正在获取汇率...
+              </div>
+            </div>
+          </div>
+          <button onclick="resetAll()" class="reset-button">重置所有</button>
+        </div>
       </div>
+      <div class="action-buttons">
+        <a href="http://e.tb.cn/h.TcnLe2dHa6F5c0r?tk=tKCL3tk8ZUo" target="_blank" class="buy-button">
+          购买CASH充值卡
+        </a>
+        <button onclick="copyTaobaoText()" class="copy-button">
+          复制淘宝口令
+        </button>
+      </div>
+      <!-- Toast 提示 -->
+      <div id="toast" class="toast">复制成功</div>
     </div>
 
     <script src="js/main.js"></script>

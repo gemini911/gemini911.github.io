@@ -205,3 +205,34 @@ function convertCurrency(sourceId) {
       break;
   }
 }
+
+// 复制淘宝文本
+function copyTaobaoText() {
+  const text = `【淘宝】45%买家复购 http://e.tb.cn/h.TcnLe2dHa6F5c0r?tk=tKCL3tk8ZUo CZ0001 「自动发卡 雷蛇充值卡(泰国)Razer Gold PIN [TH] 1000THB」\n点击链接直接打开 或者 淘宝搜索直接打开`;
+  
+  // 创建临时文本区域
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  
+  // 选择文本并复制
+  textarea.select();
+  document.execCommand('copy');
+  
+  // 移除临时文本区域
+  document.body.removeChild(textarea);
+  
+  // 显示 toast
+  showToast();
+}
+
+// 显示 toast 提示
+function showToast() {
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  
+  // 3秒后隐藏
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}
