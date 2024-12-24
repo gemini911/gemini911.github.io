@@ -17,7 +17,8 @@ body {
   padding: 0;
   min-height: 100vh;
   background: #f7fafc;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 .container {
@@ -67,10 +68,9 @@ h2 {
 }
 
 .rate-input {
-  display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .rate-input label,
@@ -106,7 +106,7 @@ h2 {
   .currency-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .rate-input {
     flex-direction: column;
     align-items: flex-start;
@@ -230,7 +230,8 @@ h2 {
 }
 
 .buy-button,
-.copy-button {
+.copy-button,
+.link-button {
   padding: 6px 12px;
   border-radius: 4px;
   font-size: clamp(0.8rem, 2.5vw, 0.9rem);
@@ -238,7 +239,17 @@ h2 {
   transition: all 0.2s;
   text-decoration: none;
   border: none;
+  text-align: center;
   min-width: 100px;
+}
+
+.link-button {
+  background: #000000;
+  color: white;
+}
+
+.link-button:hover {
+  background: #404040;
 }
 
 .buy-button {
@@ -282,6 +293,9 @@ h2 {
   opacity: 1;
 }
 
+.flag-img {
+  padding-right: 3px;
+}
 /* 移除输入框的上下箭头 */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

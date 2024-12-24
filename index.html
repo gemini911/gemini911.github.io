@@ -24,7 +24,7 @@
             <input
               type="text"
               id="rmb-to-rb-rate"
-              value="160"
+              value="170"
               min="0"
               step="0.1"
             />
@@ -36,12 +36,15 @@
           <h2>货币换算</h2>
           <div class="currency-grid">
             <div class="currency-box">
-              <label for="rmb">人民币 (CNY)</label>
+              <label for="rmb"
+                ><img src="images/rmb.png" class="flag-img" />人民币
+                (CNY)</label
+              >
               <div class="input-group">
                 <input
                   type="text"
                   id="rmb"
-                  placeholder="输入人民币"
+                  placeholder="请输入"
                   onkeyup="convertCurrency('rmb')"
                   onchange="convertCurrency('rmb')"
                 />
@@ -51,12 +54,14 @@
               </div>
             </div>
             <div class="currency-box">
-              <label for="rb">RB</label>
+              <label for="rb"
+                ><img src="images/rb.png" class="flag-img" />RB</label
+              >
               <div class="input-group">
                 <input
                   type="text"
                   id="rb"
-                  placeholder="输入RB"
+                  placeholder="请输入"
                   onkeyup="convertCurrency('rb')"
                   onchange="convertCurrency('rb')"
                 />
@@ -67,12 +72,14 @@
               <div class="chinese-number" id="rb-chinese"></div>
             </div>
             <div class="currency-box">
-              <label for="mb">MB</label>
+              <label for="mb"
+                ><img src="images/Cash.png" class="flag-img" />CASH</label
+              >
               <div class="input-group">
                 <input
                   type="text"
                   id="mb"
-                  placeholder="输入MB"
+                  placeholder="请输入"
                   onkeyup="convertCurrency('mb')"
                   onchange="convertCurrency('mb')"
                 />
@@ -83,12 +90,14 @@
               <div class="chinese-number" id="mb-chinese"></div>
             </div>
             <div class="currency-box">
-              <label for="thb">泰铢 (THB)</label>
+              <label for="thb"
+                ><img src="images/thb.png" class="flag-img" />泰铢 (THB)</label
+              >
               <div class="input-group">
                 <input
                   type="text"
                   id="thb"
-                  placeholder="输入泰铢"
+                  placeholder="请输入"
                   onkeyup="convertCurrency('thb')"
                   onchange="convertCurrency('thb')"
                 />
@@ -105,6 +114,9 @@
         </div>
       </div>
       <div class="action-buttons">
+        <a href="https://rebirth-rc.com/" target="_blank" class="link-button">
+          去官网
+        </a>
         <a
           href="http://e.tb.cn/h.TcnLe2dHa6F5c0r?tk=tKCL3tk8ZUo"
           target="_blank"
