@@ -102,22 +102,14 @@ h2 {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@container (max-width: 560px) {
   .currency-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
   }
   
   .rate-input {
     flex-direction: column;
     align-items: flex-start;
-  }
-}
-
-@container (max-width: 560px) {
-  .currency-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
   }
 }
 
@@ -288,62 +280,6 @@ h2 {
 .toast.show {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
-}
-
-/* 响应式设计 */
-@media screen and (max-width: 480px) {
-  .container {
-    padding: 10px;
-  }
-  
-  .card {
-    padding: 15px;
-  }
-
-  .rate-input {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .currency-box {
-    padding: 12px;
-  }
-
-  .input-group input {
-    padding: 8px 12px;
-  }
-
-  .action-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .buy-button,
-  .copy-button {
-    width: 100%;
-    max-width: 200px;
-    text-align: center;
-  }
-}
-
-/* 超小屏幕适配 */
-@media (max-width: 360px) {
-  .card {
-    padding: 12px;
-  }
-
-  .currency-box {
-    padding: 10px;
-  }
-
-  h1 {
-    margin-bottom: 1.5rem;
-  }
-
-  h2 {
-    margin-bottom: 0.8rem;
-  }
 }
 
 /* 移除输入框的上下箭头 */
